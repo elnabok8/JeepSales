@@ -24,7 +24,7 @@ public interface JeepSalesController {
 	@Operation(
 			summary = "Returns a list of Jeeps",
 			description = "Returns a lsit of Jeeps given an optional model and/or trim",
-		
+		// @formatter:off
 			responses = {
 					@ApiResponse(
 							responseCode = "200",
@@ -56,11 +56,14 @@ public interface JeepSalesController {
 					
 			}
 			)
+	//@formatter:on
 	@GetMapping
 	@ResponseStatus(code = HttpStatus.OK)
 	List<Jeep> fetchJeeps(
 			@RequestParam(required = false)
-			String model, String trim);
+			String model,
+	@RequestParam(required = false)
+	String trim);
 
 
 }
