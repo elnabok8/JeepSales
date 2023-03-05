@@ -1,6 +1,7 @@
 package com.promineotech.jeep.controller.support;
 
 import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,7 +30,9 @@ List<Jeep> list = new LinkedList<>();
 				.wheelSize(17)
 				.basePrice(new BigDecimal("31975.00"))
 				.build());
+		
 //@formatter:on
+		Collections.sort(list);
 return list;
 
 
